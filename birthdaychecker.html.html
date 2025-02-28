@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Checker</title>
+    <script>
+        function checkDate() {
+            // Get the value from the input field
+            const userDate = document.getElementById("dateInput").value;
+            
+            // Predefined dates
+            const birthday = "030307";  // March 3, 2007
+            const specialDate = "251222";  // December 25, 2022
+            
+            // Check the input and show respective pages/messages
+            if (userDate === birthday) {
+                window.location.href = "birthday.html";  // Redirect to the birthday message page
+            } else if (userDate === specialDate) {
+                window.location.href = "lovelymessage.html";  // Redirect to the lovely message page
+            } else {
+                alert("Sorry, no special message for this date!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter your Date (DDMMYY):</h1>
+    <input type="text" id="dateInput" maxlength="6" placeholder="e.g. 030307">
+    <button onclick="checkDate()">Submit</button>
+</body>
+</html>
