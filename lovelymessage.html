@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>A Lovely Message</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
@@ -22,10 +22,11 @@
             flex-direction: column;
             animation: fadeIn 1.5s ease-in-out;
             padding: 20px;
+            overflow: hidden;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
             font-family: 'Pacifico', cursive;
             font-weight: bold;
@@ -33,24 +34,39 @@
         }
 
         .message {
-            font-size: 1.5rem;
-            background: rgba(0, 0, 0, 0.5);
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.6);
             padding: 15px;
             border-radius: 10px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            max-width: 80%;
+            max-width: 90%;
+            overflow-y: auto;
+            max-height: 70vh;
         }
 
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .message {
+                font-size: 1rem;
+                padding: 10px;
+                max-height: 60vh;
+            }
+        }
+
     </style>
 </head>
 <body>
     <h1>A Message for You!</h1>
     <p class="message">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         Hey, hi, yepdi erukka? Nalla erukka nu ninaikuren, ennaiku nee potruntha dress la sema alaga eruntha aprm first of all yellathukkum sry un life la vanthathukkum intha Yella prechanaikum un veetla already strict eppo yennala unakku eruntha konjam freedom kooda poirukkum so theriyum yepdiyum yen mela kovam ma thaan eruppa nu so yellathukkum sorry aprm nee yepdi nu thrla but na yeppovume nee yen life la vanthatha regret pannathu ella unakku venumna  naan oru ketta kanava erukkalaam but yennaku nu vantha ore kanavu nee mattum thaan. Aprm nee yennakkaaga wait pannanum nu onnum Avasiyam ella aprm move on panrathunum un viruppam thaan but onnu nalla purinjukko nee ethukku munna yaara love panna, eppo yaara love panra, Inime yaara love pannuva nu yethuvum yenakku mukkiyam ella, yenna nadanthalum na unna love panratha nirutha porathu ella unnoda college mudiyera munnadi namma rendu veru familyaiyum paathukira alavukku seekram periya aal aagi un college last day la unna thedi varuven, vanthu propose pannuven ok na apdiye straight ta unga appa ta poi pesuren aprm phone la mattum unna pondaati nu koopdratha nerla unna un family aprm antha prayer grp nu yellar munnadiyum kooptu kootitu poven (with permission) nee no sonna kooda parava la coz nee yen nilava erukkura maathiri yennala unakku erukka mudiyala naalum parava ella yeriyera vaal natchathiram maathiri un aasai yellam neravethanum nu ninaikuren so nee yenna love panriyo ellaiyo yethathu help or prechana na thayangaama koopdu oru friend ella oru wellwisher ra nee yepdi ninaikuriyo apdi na unakku eruppen aprm yetho palakka thoshathula evlo type panniten sorry 
+        Hey, hi, yepdi erukka? Nalla erukka nu ninaikuren, ennaiku nee potruntha dress la sema alaga eruntha aprm first of all yellathukkum sry un life la vanthathukkum intha Yella prechanaikum un veetla already strict eppo yennala unakku eruntha konjam freedom kooda poirukkum so theriyum yepdiyum yen mela kovam ma thaan eruppa nu so yellathukkum sorry aprm nee yepdi nu thrla but na yeppovume nee yen life la vanthatha regret pannathu ella unakku venumna  naan oru ketta kanava erukkalaam but yennaku nu vantha ore kanavu nee mattum thaan. Aprm nee yennakkaaga wait pannanum nu onnum Avasiyam ella aprm move on panrathunum un viruppam thaan but onnu nalla purinjukko nee ethukku munna yaara love panna, eppo yaara love panra, Inime yaara love pannuva nu yethuvum yenakku mukkiyam ella, yenna nadanthalum na unna love panratha nirutha porathu ella unnoda college mudiyera munnadi namma rendu veru familyaiyum paathukira alavukku seekram periya aal aagi un college last day la unna thedi varuven, vanthu propose pannuven ok na apdiye straight ta unga appa ta poi pesuren aprm phone la mattum unna pondaati nu koopdratha nerla unna un family aprm antha prayer grp nu yellar munnadiyum kooptu kootitu poven (with permission) nee no sonna kooda parava la coz nee yen nilava erukkura maathiri yennala unakku erukka mudiyala naalum parava ella yeriyera vaal natchathiram maathiri un aasai yellam neravethanum nu ninaikuren so nee yenna love panriyo ellaiyo yethathu help or prechana na thayangaama koopdu oru friend ella oru wellwisher ra nee yepdi ninaikuriyo apdi na unakku eruppen aprm yetho palakka thoshathula evlo type panniten sorry 
         <br><br>
         aprm Goodbye, 3 years after meet pannuvom, love you 💜!
     </p>
