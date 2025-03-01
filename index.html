@@ -34,91 +34,7 @@
             margin-bottom: 20px;
             width: 200px;
             transition: all 0.3s ease;
-        }
-
-        input:focus {
-            border-color: #ff7e5f;
-            outline: none;
-        }
-
-        button {
-            padding: 12px 20px;
-            background-color: #ff7e5f;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #9b59b6; /* Purple hover color */
-            transform: scale(1.1);
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            0% { transform: translateY(-50px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-
-        /* Animation for the submit button */
-        @keyframes buttonClick {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
-        }
-
-    </style>
-    <script>
-        function checkDate() {
-            // Get the value from the input field and trim spaces
-            const userDate = document.getElementById("dateInput").value.trim();
-            
-            // Prevent empty input
-            if (userDate === "") {
-                alert("Please enter a date.");
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date Checker</title>
-    <style>
-        /* Background and layout */
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ff7e5f, #9b59b6); /* Pink to Purple gradient */
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
             text-align: center;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            animation: slideIn 1.5s ease-out;
-        }
-
-        /* Input and button styling */
-        input {
-            padding: 10px;
-            font-size: 1.2rem;
-            border: 2px solid #fff;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            width: 200px;
-            transition: all 0.3s ease;
         }
 
         input:focus {
@@ -176,7 +92,11 @@
             const specialDate = "251222";  // December 25, 2022
             
             // Show button animation
-            document.querySelector("button").style.animation = "buttonClick 0.3s ease-in-out";
+            let button = document.querySelector("button");
+            button.style.animation = "none"; // Reset animation
+            setTimeout(() => {
+                button.style.animation = "buttonClick 0.3s ease-in-out";
+            }, 10);
             
             // Redirect based on input
             setTimeout(function() {
@@ -194,7 +114,9 @@
 <body>
     <div>
         <h1>Enter your Date (DDMMYY):</h1>
-        <input type="text" id="dateInput" maxlength="6" placeholder="e.g. 030307" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        <input type="text" id="dateInput" maxlength="6" placeholder="e.g. 030307" 
+               onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        <br>
         <button onclick="checkDate()">Submit</button>
     </div>
 </body>
