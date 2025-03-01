@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Happy Birthday di loosu!</title>
     <style>
         /* Background and layout */
         body {
             font-family: 'Arial', sans-serif;
-            background: #fbe6e1; /* Background color in Hex */
-            background: rgba(251, 230, 225, 1); /* Background color in RGBA */
+            background: #fbe6e1;
             color: white;
             display: flex;
             justify-content: center;
@@ -17,46 +16,48 @@
             height: 100vh;
             margin: 0;
             text-align: center;
-            flex-direction: row;  /* Allow side-by-side layout */
+            flex-direction: column; /* Stack elements on mobile */
             animation: fadeIn 1.5s ease-in-out;
             padding: 20px;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
-        /* Text Section (Left Side) */
+        /* Text Section */
         .text-container {
-            flex: 1;  /* Takes up 50% of the space */
-            text-align: left;
+            max-width: 90%;
             animation: fadeInText 2s ease-in-out;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 20px;
             font-family: 'Comic Sans MS', sans-serif;
             font-weight: bold;
             color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text outline with shadow */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text outline with shadow */
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
 
         .birthday-wish {
-            font-size: 2rem;
+            font-size: 1.4rem;
             font-weight: bold;
             color: #fff;
-            margin-top: 20px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text outline with shadow */
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            word-wrap: break-word;
         }
 
         /* Bunny Image */
         .bunny-image {
-            width: 300px;  /* Make the bunny bigger */
+            width: 80%; /* Make image responsive */
+            max-width: 250px;
             animation: bounce 2s infinite;
-            margin-left: 20px;
+            margin-top: 20px;
         }
 
         /* Animations */
@@ -72,8 +73,18 @@
 
         @keyframes bounce {
             0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-10px); }
             100% { transform: translateY(0); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            p, .birthday-wish {
+                font-size: 1.2rem;
+            }
         }
 
     </style>
@@ -86,11 +97,10 @@
             Happiest Birthday to one of my favourite person I've ever met in my life. I cannot explain how much u mean to me, But onnu nalla purinjiko, Enoda life la enaku kedacha oru periya gift na adhu nee thaan. Evlovo persons ah life la cross pani vandhuruken, aana unkooda irukumbothu kedaikira comfort, love aprm antha caring feel Vera yarkooda irukumbothum varala. Enoda heart la irukura onoda place ah, life la yaaralum replace pana mudiyathu. Aprm unna naraya vaati na hurt panni erukken la athu yellathukkum romba sorry aprm yennaala nadantha yella prechanaikum sry. Aprm unna alavida maaten nu promise pannen but atha break pannathukkum sry. Namma future meet pannuvoma nu thrla apdi meet pannalum ethukku munna yenna paatha maathiri paapiya nu thrla but yeppovume na unakkaga eruppen Even if we can't be together in the end, i m glad that u were a part of my life
 Happiest Birthday mofi ...💜! 🎂🎉
 
-        </div>
+      </div>
     </div>
 
     <!-- Cute Bunny Rabbit Image -->
     <img src="https://media.tenor.com/3Rwfj9OpyLIAAAAC/kawaii-anime.gif" alt="Cute Bunny with Cake" class="bunny-image">
-
 </body>
 </html>
