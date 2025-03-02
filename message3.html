@@ -7,9 +7,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: url('https://i.pinimg.com/474x/58/8a/08/588a08f15bc66224d922fb099877e903.jpg') left center/50% auto no-repeat,
-                        url('https://i.pinimg.com/474x/af/c4/3b/afc43b504b64987968701eeac5fbed61.jpg') right center/50% auto no-repeat;
-            background-color: black;
+            background: black;
             color: white;
             display: flex;
             justify-content: center;
@@ -18,6 +16,35 @@
             margin: 0;
             text-align: center;
             animation: zoomOut 2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: url('https://i.pinimg.com/474x/58/8a/08/588a08f15bc66224d922fb099877e903.jpg') center/cover no-repeat;
+        }
+
+        .background-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: url('https://i.pinimg.com/474x/af/c4/3b/afc43b504b64987968701eeac5fbed61.jpg') center/cover no-repeat;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
         }
 
         h1 {
@@ -27,20 +54,31 @@
 
         .message {
             font-size: 1.5rem;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 80%;
         }
 
         @keyframes zoomOut {
             0% { transform: scale(1.2); }
             100% { transform: scale(1); }
         }
+
+        @media (max-width: 768px) {
+            .background-left, .background-right {
+                width: 100%;
+                height: 50%;
+            }
+            .background-left {
+                top: 0;
+            }
+            .background-right {
+                top: 50%;
+            }
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div class="background-left"></div>
+    <div class="background-right"></div>
+    <div class="content">
         <h1>Message for You!</h1>
         <p class="message">This is a special message just for you. Hope you like it!</p>
     </div>
