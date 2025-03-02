@@ -2,47 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message 3</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: url('https://i.pinimg.com/474x/58/8a/08/588a08f15bc66224d922fb099877e903.jpg') left center/50% auto no-repeat,
+                        url('https://i.pinimg.com/474x/af/c4/3b/afc43b504b64987968701eeac5fbed61.jpg') right center/50% auto no-repeat;
+            background-color: black;
+            color: white;
             display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
             margin: 0;
-        }
-        .left-half {
-            width: 50%;
-            background-image: url('https://i.pinimg.com/474x/58/8a/08/588a08f15bc66224d922fb099877e903.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        .right-half {
-            width: 50%;
-            background-image: url('https://i.pinimg.com/474x/af/c4/3b/afc43b504b64987968701eeac5fbed61.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        .message {
-            position: absolute;
-            width: 80%;
-            left: 10%;
-            top: 40%;
             text-align: center;
+            animation: zoomOut 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .message {
             font-size: 1.5rem;
-            color: white;
             background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
+            max-width: 80%;
+        }
+
+        @keyframes zoomOut {
+            0% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <div class="left-half"></div>
-    <div class="right-half"></div>
-    <div class="message">
-        <h1>Message 3</h1>
-        <p>Your personalized message here...</p>
+    <div>
+        <h1>Message for You!</h1>
+        <p class="message">This is a special message just for you. Hope you like it!</p>
     </div>
 </body>
 </html>
