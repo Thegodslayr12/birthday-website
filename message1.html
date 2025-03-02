@@ -9,7 +9,7 @@
         /* Background and layout */
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('https://images.wallpapersden.com/image/download/lonely-road-at-night_a21rZ2uUmZqaraWkpJRmaWllrW5lZQ.jpg');
+            background-image: url('https://media.istockphoto.com/id/108272810/photo/lonely-drive.jpg?s=612x612&w=0&k=20&c=JPPpNpM-DMoKcbeDXZB0gs1UogmtR2_E0FaH1vxS7zo=');
             background-size: cover;
             background-position: center;
             color: white;
@@ -36,6 +36,41 @@
             font-size: 1.2rem;
             background: rgba(0, 0, 0, 0.6);
             padding: 15px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            0% { background-size: 120%; }
+            100% { background-size: 100%; }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .message {
+                font-size: 1rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Special Message Just for You!</h1>
+    <p class="message">
+        No matter where you are, this message is here to remind you that you're special. Keep shining! 🌟💖
+    </p>
+</body>
+</html>15px;
             border-radius: 10px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
             max-width: 90%;
