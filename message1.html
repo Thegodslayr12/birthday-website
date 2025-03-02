@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Message 1</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
@@ -20,8 +20,9 @@
             margin: 0;
             text-align: center;
             flex-direction: column;
-            animation: fadeIn 1.5s ease-in-out, zoomIn 5s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out, zoomEffect 10s infinite alternate ease-in-out;
             padding: 20px;
+            overflow: hidden;
         }
 
         h1 {
@@ -39,6 +40,8 @@
             border-radius: 10px;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
             max-width: 90%;
+            overflow-y: auto;
+            max-height: 70vh;
         }
 
         @keyframes fadeIn {
@@ -46,9 +49,9 @@
             100% { opacity: 1; }
         }
 
-        @keyframes zoomIn {
-            0% { background-size: 120%; }
-            100% { background-size: 100%; }
+        @keyframes zoomEffect {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
         }
 
         /* Responsive adjustments */
@@ -56,10 +59,10 @@
             h1 {
                 font-size: 2rem;
             }
-
             .message {
                 font-size: 1rem;
                 padding: 10px;
+                max-height: 60vh;
             }
         }
     </style>
@@ -67,8 +70,7 @@
 <body>
     <h1>Special Message Just for You!</h1>
     <p class="message">
-        No matter where you are, this message is here to remind you that you're special. Keep shining! ✨💖
+        No matter where you are, this message is here to remind you that you're special. Keep shining! 🌟💖
     </p>
 </body>
 </html>
-
