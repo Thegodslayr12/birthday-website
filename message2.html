@@ -12,6 +12,7 @@
             background-image: url('https://i.pinimg.com/originals/85/ec/2d/85ec2dd082aa53504eb19f5c98c674fc.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             background-attachment: fixed;
             color: white;
             display: flex;
@@ -23,7 +24,6 @@
             flex-direction: column;
             animation: fadeIn 1.5s ease-in-out;
             padding: 20px;
-            transform: scale(0.8); /* Zoom out effect */
         }
 
         h1 {
@@ -47,6 +47,22 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                background-size: cover;
+                background-attachment: scroll;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .message {
+                font-size: 1.2rem;
+                padding: 10px;
+                max-width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -56,3 +72,4 @@
     </p>
 </body>
 </html>
+
