@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date Checker</title>
     <style>
-        /* Background and layout */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #ff7e5f, #9b59b6); /* Pink to Purple gradient */
+            background: linear-gradient(to right, #ff7e5f, #9b59b6);
             color: white;
             display: flex;
             justify-content: center;
@@ -25,7 +24,6 @@
             animation: slideIn 1.5s ease-out;
         }
 
-        /* Input and button styling */
         input {
             padding: 10px;
             font-size: 1.2rem;
@@ -54,11 +52,10 @@
         }
 
         button:hover {
-            background-color: #9b59b6; /* Purple hover color */
+            background-color: #9b59b6;
             transform: scale(1.1);
         }
 
-        /* Animations */
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
@@ -69,7 +66,6 @@
             100% { transform: translateY(0); opacity: 1; }
         }
 
-        /* Animation for the submit button */
         @keyframes buttonClick {
             0% { transform: scale(1); }
             100% { transform: scale(1.05); }
@@ -78,36 +74,34 @@
     </style>
     <script>
         function checkDate() {
-            // Get the value from the input field and trim spaces
             const userDate = document.getElementById("dateInput").value.trim();
-            
-            // Prevent empty input
             if (userDate === "") {
                 alert("Please enter a date.");
                 return;
             }
 
-            // Predefined dates
-            const birthday = "030307";  // March 3, 2007
-            const specialDate = "251222";  // December 25, 2022
-            
-            // Show button animation
+            const dateMappings = {
+                "030307": "birthday.html",
+                "251222": "lovelymessage.html",
+                "010422": "message1.html",
+                "271022": "message2.html",
+                "311022": "message3.html",
+                "111123": "message4.html"
+            };
+
             let button = document.querySelector("button");
-            button.style.animation = "none"; // Reset animation
+            button.style.animation = "none";
             setTimeout(() => {
                 button.style.animation = "buttonClick 0.3s ease-in-out";
             }, 10);
-            
-            // Redirect based on input
+
             setTimeout(function() {
-                if (userDate === birthday) {
-                    window.location.href = "birthday.html";  // Redirect to birthday page
-                } else if (userDate === specialDate) {
-                    window.location.href = "lovelymessage.html";  // Redirect to lovely message page
+                if (dateMappings[userDate]) {
+                    window.location.href = dateMappings[userDate];
                 } else {
                     alert("Sorry, no special message for this date!");
                 }
-            }, 300); // Simulate a small delay for the animation
+            }, 300);
         }
     </script>
 </head>
@@ -121,3 +115,4 @@
     </div>
 </body>
 </html>
+
